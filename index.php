@@ -1,36 +1,31 @@
+<!--/* CAMBIAR
+session_start();
+?>*/-->
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Formulario</title>
-</head>
-<body>
-	<h1 align="center">Formulario de login</h1>
-	<form action="comprueba_login.php" method="post">
-		<table align="center">
-    		<tr>
-      			<td>Login:</td>
-      			<td><label for="nombre_usuario"></label>
-      			<input type="text" name="login"></td>
-    		</tr>
-    		<tr>
-      			<td>Password:</td>
-				<td><label for="password_usuario"></label>
-			  	<input type="text" name="password" ></td>
-			</tr>
-			<tr>
-      			<td><input type="submit" name="enviar" value="Entrar"></td>
-				<td><input type="button" name="registro" onclick="location.href='form_registro.php'" value="Regristro"></td>
-    		</tr>
-  		</table>
-	</form>
-<?php
-	require_once("controller/usuarioscontroller.php");
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Nombre - Mánager de Fútbol Online</title>
+      <link rel="stylesheet" type="text/css" href="./view/css/style.css">
+  </head>
+  <body>
+    <div id="banner">
+      <div id="banner-content">
+        <a class="navbar-brand" href="index.php"><b>HOME</b></a>
+        <a href="./view/v_registro.php">REGISTRO</a>
+        <a href="./view/v_login.php">LOGIN</a>
+<!--    <a href="./models/logout.php">LOGOUT</a>  -->
 
+<!--/*--CAMBIAR
+        <?php if(!isset($_SESSION["username"])):?>
 
- ?>
+        <?php else:?>
+        <?php endif;?>*/-->
 
-
-
-
-</body>
+      </div>
+    </div>
+    <div id="main-content">
+      <h2>Nombre - Mánager de Fútbol Online</h2>
+      <p>Administra tu propio equipo y crea con tus amigos una liga virtual. Sólo tú eres el responsable del equipo, de las tácticas y de los fichajes. Tus habilidades financieras y estratégicas son decisivas para alzarte con el trofeo Campeón de Liga. ¿Juegas? Adelante regístrate ¡Es gratis!</p>
+    </div>
+  </body>
 </html>
