@@ -14,12 +14,8 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <?php if(!isset($_SESSION["username"])):?>
-      <li><a href="../controllers/registro.php">REGISTRO</a></li>
-      <li><a href="../controllers/login.php">LOGIN</a></li>
-    <?php else:?>
-      <li><a href="../models/logout.php">LOGOUT</a></li>
-    <?php endif;?>
+      <li><a href="../view/v_registro.php">REGISTRO</a></li>
+      <li><a href="../view/v_login.php">LOGIN</a></li>
     </ul>
 
   </div><!-- /.navbar-collapse -->

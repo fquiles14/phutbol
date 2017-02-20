@@ -1,10 +1,5 @@
 <?php include "navbar.php"; ?>
 
-
-
-<!--<?php session_start(); ?>-->
-
-
 <html>
 	<head>
 		<title>Nombre - Mánager de Fútbol Online</title>
@@ -17,10 +12,10 @@
 <div class="col-md-6">
 		<h2>Login</h2>
 
-		<form role="form" name="login" action="v_login.php" method="post">
+		<form role="form" name="login" action="../controller/c_login.php" method="post">
 		  <div class="form-group">
-		    <label for="username">Nombre de usuario</label>
-		    <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario">
+		    <label for="login">Nombre de usuario</label>
+		    <input type="text" class="form-control" id="login" name="login" placeholder="Nombre de usuario">
 		  </div>
 		  <div class="form-group">
 		    <label for="password">Contrase&ntilde;a</label>

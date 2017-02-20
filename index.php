@@ -1,6 +1,3 @@
-<!--/* CAMBIAR
-session_start();
-?>*/-->
 <html>
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -13,14 +10,6 @@ session_start();
         <a class="navbar-brand" href="index.php"><b>HOME</b></a>
         <a href="./view/v_registro.php">REGISTRO</a>
         <a href="./view/v_login.php">LOGIN</a>
-<!--    <a href="./models/logout.php">LOGOUT</a>  -->
-
-<!--/*--CAMBIAR
-        <?php if(!isset($_SESSION["username"])):?>
-
-        <?php else:?>
-        <?php endif;?>*/-->
-
       </div>
     </div>
     <div id="main-content">

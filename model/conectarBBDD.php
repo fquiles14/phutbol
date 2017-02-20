@@ -2,22 +2,23 @@
 
 
 	class Conectar {
+		private $driver;
+		private $host, $user, $pass, $database, $charset;
 
-		public static function conexion() {
-
-			try {
-
-				$db = new PDO("mysql:host=localhost; dbname=juego", "juego", "juego");
-				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				$db->exec("SET CHARACTER SET UTF8");
-
-			} catch (PDOException $e) {
-
-				die("Error" . $e->getMessage());
-				echo "Línea del error " . $e->getLine();
-
-			}
-
-			return $db;
+		public function __construct(){
+			$configuracion_db = require_once 'config/database.php';
+			$this->driver=$configuracion_db["driver"];
+			$this->host=$configuracion_db["host"];
+			$this->user=$configuracion_db["user"];
+			$this->pass=$configuracion_db["pass"];
+			$this->database=$configuracion_db["database"];
 		}
+
+		public function conexion(){
+		  $conexion = new PDO($this->driver.":host=".$this->host.":dbname=".$this->database, $this->user, $this->pass);
+      $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$conexion->exec("SET CHARACTER SET UTF8");
+
+      return $conexion;
+    }
 	}

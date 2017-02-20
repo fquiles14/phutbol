@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div#banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0A9808;
+  width: 100%;
+  word-spacing: 10px;
+  font: 120% monospace;
+}
+div#banner-content {
+  width: 800px;
+  margin: 0;
+  padding: 10px;
+}
+div#main-content {
+  padding-top: 70px;
+}
+a:link {
+  text-decoration:none;
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:active {
+  color: white;
+}
+a:hover {
+  color: #E5E5E5;
+}
+body {
+  color: white;
+  background-color: #1CCA19;
+  background-image: url(http://isenacode.com/wp-content/uploads/2014/11/Football-Manager-1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+h2 {
+  text-align: center;
+  font: 200% sans-serif;
+  margin: 20px;
+  background-color: rgba(10, 255, 8, 0.7);
+  padding: 10px;
+  border-radius: 9px 9px 9px 9px;
+  text-shadow: 1px 2px #000;
+}
+p {
+  font: 150% sans-serif;
+  margin: 20px;
+  background-color: rgba(10, 255, 8, 0.7);
+  padding: 10px;
+  border-radius: 9px 9px 9px 9px;
+  text-shadow: 1px 2px #000;
+}
+div#body {
+  left: 18%;
+  position: absolute;
+  top: 40;
+  padding: 0 1rem;
+  margin: 1rem;
+  background-color: #8BC34A;
+  width: 57%;
+  height: 142%;
+  font: 120% monospace;
+  border-radius: 7px;
+  padding-top: 15px;
+}
+div#izq {
+  background: white;
+  height: 87%;
+  border-radius: 7px;
+  padding-top: 20px;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+div#cen {
+  background: white;
+  height: 87%;
+  border-radius: 7px;
+  padding-top: 20px;
+  display: inline-block;
+  float: center;
+}
+div#der {
+  background: white;
+  height: 87%;
+  border-radius: 7px;
+  padding-top: 20px;
+  display: inline-block;
+  float: right;
+  margin-left: 5px;
+}
+.titulos{
+  font: 100% sans-serif;
+  background-color: #09B522;
+  border-radius: 7px;
+  text-shadow: 0px 0px #09B522;
+  margin-top: 0px;
+  text-align: center;
+}
+.apartados{
+  font: 100% sans-serif;
+  color: #000;
+  background-color: #F0F0F0;
+  border-radius: 7px;
+  text-shadow: 0px 0px #09B522;
+}
+.tabla{
+  font: 100% sans-serif;
+  color: #000;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+.text{
+  font: 100% sans-serif;
+  text-align: center;
+  color: #000;
+  text-shadow: 0px 0px;
+  background: #fff;
+}
