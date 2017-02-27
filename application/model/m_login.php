@@ -38,7 +38,11 @@
           $respuesta_sql->execute();
 
         	$filas_contadas=$respuesta_sql->rowCount();
-          return $filas_contadas;
+          if $filas_contadas =1{
+          return $result = true;
+        }else{
+          return $result = false;
+        }
         }
       }
       catch (PDOException $e) {

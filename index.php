@@ -1,4 +1,4 @@
-<html>
+<!--<html>
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <title>Nombre - Mánager de Fútbol Online</title>
@@ -18,3 +18,18 @@
     </div>
   </body>
 </html>
+-->
+<?php
+require 'application/config/config.php';
+
+
+require 'application/config/autoload.php';
+
+
+if (file_exists('vendor/autoload.php')) {
+  require 'vendor/autoload.php';
+}
+
+
+autoload(Application);
+$app = new Application();

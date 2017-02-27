@@ -6,7 +6,7 @@
 		private $host, $user, $pass, $database, $charset;
 
 		public function __construct(){
-			$configuracion_db = require_once 'config/database.php';
+			$configuracion_db = require_once 'config/config.php';
 			$this->driver=$configuracion_db["driver"];
 			$this->host=$configuracion_db["host"];
 			$this->user=$configuracion_db["user"];
