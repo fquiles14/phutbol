@@ -31,5 +31,5 @@ if (file_exists('vendor/autoload.php')) {
 }
 
 
-autoload(Application);
+//autoload(Application);
 $app = new Application();

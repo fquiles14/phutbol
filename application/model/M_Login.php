@@ -1,8 +1,6 @@
 
 <?php
-
-
-  class loginLogout() {
+  class M_Login {
     private $conectar;
     private $db;
     private $tabla = usuarios;
@@ -11,14 +9,14 @@
     public function __construct($tabla) {
       $this->tabla =(string) $tabla;
 
-      require_once 'conectarBBDD.php';
+      require_once 'application/libs/Conectar.php';
       $this->Conectar = new Conectar();
       $this->db=$this->conectar->conexion();
     }
     //fin constructor
 
     //inicio funcion login
-    public function login() {
+    public function login($Login, $password) {
       private $login;
       private $password;
 

@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Nombre - Mánager de Fútbol Online</title>
-		<link rel="stylesheet" type="text/css" href="../view/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	</head>
 	<body>
 
@@ -12,7 +12,7 @@
 <div class="col-md-6">
 		<h2>Login</h2>
 
-		<form role="form" name="login" action="../controller/c_login.php" method="post">
+		<form role="form" name="login" action="../controller/C_Login.php" method="post">
 		  <div class="form-group">
 		    <label for="login">Nombre de usuario</label>
 		    <input type="text" class="form-control" id="login" name="login" placeholder="Nombre de usuario">
@@ -27,6 +27,6 @@
 </div>
 </div>
 </div>
-		<script src="/view/js/valida_login.js"></script>
+		<script src="application/view/js/valida_login.js"></script>
 	</body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-  class ControladorLogin{
+  class C_Login {
     //public $login;
     //public $password;
     //private $loginLogout;
@@ -7,19 +7,20 @@
 
   //inico constructor
   public function __construct(){
-    require_once 'm_login.php';
+    require_once 'application/model/M_Login.php';
     //$this->loginLogout = new loginLogout();
-    $login = new loginLogout();
-    $autenticado=$login->login();
+    $login = new M_Login();
+    $autenticado=$login->login($_POST["login"],$_POST["passord"] );
     //$this->login=$this->loginLogout->login();
+
 
   	if ($result = true){
   		//iniciamos sesion antes de redirigir al usuario a su página
   		session_start();
   		$_SESSION["usuario"]=$_POST["login"];
-  		header("location:../view/inicio.php");
+  		header("location:application/view/home.php");
   	}else{
-  		header("location:../view/v_registro.php");
+  		header("location:application/view/v_registro.php");
   	}
   }
   //fin constructor

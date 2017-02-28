@@ -1,6 +1,6 @@
 <?php
 
-  class Registro(){
+  class M_Registro extends Controller {
     private $nombre=$_POST['nombre'];
     private $apellido1=$_POST['apellido1'];
     private $apellido2=$_POST['apellido2'];
@@ -11,7 +11,7 @@
     private $db;
 
     public function __construct($nombre,$apellido1,$apellido2,$login,$password,$email){
-      require_once 'conectarBBDD.php';
+
       $this->Conectar = new Conectar();
       $this->db=$this->conectar->conexion();
       try {
