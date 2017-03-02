@@ -12,7 +12,7 @@
     $this->view = new View();
     }
 
-    /*public function loadModel($name) {
+  /*  public function loadModel($name) {
       $path = MODELS_PATH . strtolower($name) . '_model.php';
           if (file_exists($path)) {
               require MODELS_PATH . strtolower($name) . '_model.php';

@@ -30,33 +30,31 @@
           return false;
 
         } else {
-          require_once 'c_login.php';
+          require_once 'C_Login.php';
           $consulta_sql = "SELECT * FROM usuarios where login='$login' and password='$password'";
           $respuesta_sql = $db->prepare($consulta_sql);
           $respuesta_sql->execute();
 
         	$filas_contadas=$respuesta_sql->rowCount();
-          if $filas_contadas =1{
-          return $result = true;
-        }else{
-          return $result = false;
-        }
-        }
-      }
-      catch (PDOException $e) {
+          if $filas_contadas = 1 {
+            return $result = true;
+          } else {
+              return $result = false;
+            }
+          }
+      } catch (PDOException $e) {
     	   echo $e->getMessage();
       }
     }
-      //fin funcion login
+    //fin funcion login
 
-      //inicio funcion logout
-      public function logout() {
-        setcookie('recuerdame', false, time() - (3600 * 3650), '/', COOKIE_DOMAIN);
-        //cual de las 2??
-        Session::destroy();
-        session_destroy();
-        header("location:index.php");
-      }
+    //inicio funcion logout
+    public function logout() {
+      setcookie('recuerdame', false, time() - (3600 * 3650), '/', COOKIE_DOMAIN);
+      //cual de las 2??
+      session_destroy();
+      header("location:index.php");
+    }
     //fin funcion logout
     }
   }
