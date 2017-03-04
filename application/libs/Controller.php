@@ -1,10 +1,11 @@
 <?php
   class Controller {
-
+  private $db;
     function __construct() {
 
       try {
-        $this->db = new Conectar();
+        $db = new Conectar();
+
       } catch (PDOException $e) {
           die('No se ha podido realizar la conexión con la base de datos.');
         }

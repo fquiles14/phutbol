@@ -2,18 +2,18 @@
   class C_Login {
 
   //inico constructor
-  public function __construct(){
-    require_once 'application/model/M_Login.php';
+  public function logarse($user, $password){
+    require_once '../model/M_Login.php';
     $login = new M_Login();
-    $autenticado=$login->login($_POST["login"],$_POST["passord"] );
+    $autenticado=$login->login($user,$password );
 
-  	if ($autenticado = true){
+  	if ($autenticado == true){
   		//iniciamos sesion antes de redirigir al usuario a su página
   		session_start();
   		$_SESSION["usuario"]=$_POST["login"];
-  		header("location:application/view/home.php");
+  		header("location:../view/home.php");
   	}else{
-  		header("location:application/view/v_registro.php");
+  		header("location:../view/v_registro.php");
   	}
   }
   //fin constructor

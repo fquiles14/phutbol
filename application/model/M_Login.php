@@ -1,24 +1,21 @@
 
 <?php
   class M_Login {
-    private $conectar;
     private $db;
-    private $tabla = usuarios;
+
 
     //inicio constructor
-    public function __construct($tabla) {
-      $this->tabla =(string) $tabla;
+    public function __construct() {
 
-      require_once 'application/libs/Conectar.php';
-      $this->Conectar = new Conectar();
-      $this->db=$this->conectar->conexion();
+      require_once '../libs/Conectar.php';
+      $conectar = new Conectar();
+      $this->db=$conectar->conexion();
     }
     //fin constructor
 
     //inicio funcion login
     public function login($Login, $password) {
-      private $login;
-      private $password;
+
 
       try {
         if (!isset($_POST['login']) OR empty($_POST['login'])) {
@@ -30,13 +27,13 @@
           return false;
 
         } else {
-          require_once 'C_Login.php';
+          require_once '../controller/C_Login.php';
           $consulta_sql = "SELECT * FROM usuarios where login='$login' and password='$password'";
           $respuesta_sql = $db->prepare($consulta_sql);
           $respuesta_sql->execute();
 
         	$filas_contadas=$respuesta_sql->rowCount();
-          if $filas_contadas = 1 {
+          if ($filas_contadas == 1) {
             return $result = true;
           } else {
               return $result = false;
@@ -56,5 +53,4 @@
       header("location:index.php");
     }
     //fin funcion logout
-    }
   }
