@@ -1,16 +1,10 @@
 <?php
 
-	class Conectar {
 
-		public function __construct() {
-			require_once '../config/config.php';
-		}
-
-		public function conexion(){
-		  $conexion = new PDO(driver.":host=".host.":dbname=".database, user, pass);
-      $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$conexion->exec("SET CHARACTER SET UTF8");
-
-      return $conexion;
-    }
+class Conectar extends PDO {
+	public function __construct() {
+		//require '../config/config.php';
+  	$options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
+  	parent::__construct("mysql:host=localhost; dbname=phutbol", "alvaro", "alvaro");
 	}
+}

@@ -1,16 +1,15 @@
 <?php
   class Controller {
-  private $db;
+    private $db;
+
     function __construct() {
-
       try {
-        $db = new Conectar();
-
+        $this->db = new Conectar();
       } catch (PDOException $e) {
-          die('No se ha podido realizar la conexión con la base de datos.');
+          die('No podemos establecer la conexion con la base de datos jolin.');
         }
 
-    $this->view = new View();
+      $this->view = new View();
     }
 
   /*  public function loadModel($name) {

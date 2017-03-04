@@ -1,14 +1,20 @@
+<?php
+	include "navbar.php";
+?>
+
 <html>
 	<head>
 		<title>HOME</title>
-		<link rel="stylesheet" type="text/css" href="stilo.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
 	</head>
 	<body>
 		<div id="banner">
       <div id="banner-content">
-        <a class="navbar-brand" href="application/view/index.php"><b>HOME</b></a>
-        <a href="registro.php">REGISTRO</a>
-        <a href="login.php">LOGIN</a>
+        <a class="navbar-brand" href="../index.php"><b>HOME</b></a>
+<!--
+				<a href="registro.php">REGISTRO</a>
+      	<a href="login.php">LOGIN</a>
+ -->
         <a href="logout.php">LOGOUT</a>
       </div>
     </div>

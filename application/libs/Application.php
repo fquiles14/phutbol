@@ -7,5 +7,4 @@ class Application
     $controller = new Index();
     $controller->index();
   }
-  
 }

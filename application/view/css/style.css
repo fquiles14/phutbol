@@ -35,7 +35,7 @@ a:hover {
 body {
   color: white;
   background-color: #1CCA19;
-  background-image: url(http://isenacode.com/wp-content/uploads/2014/11/Football-Manager-1.jpg);
+  background-image: url("../images/tapiz.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;

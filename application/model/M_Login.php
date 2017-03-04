@@ -1,22 +1,20 @@
 
 <?php
   class M_Login {
-    private $db;
-
 
     //inicio constructor
-    public function __construct() {
-
+    /*public function __construct() {
       require_once '../libs/Conectar.php';
-      $conectar = new Conectar();
-      $this->db=$conectar->conexion();
-    }
+      $db = new Conectar();
+    }*/
+
     //fin constructor
 
     //inicio funcion login
     public function login($Login, $password) {
-
-
+      //private $db;
+      require_once '../libs/Conectar.php';
+      $db = new Conectar();
       try {
         if (!isset($_POST['login']) OR empty($_POST['login'])) {
           $_SESSION["feedback_negative"][] = FEEDBACK_USERNAME_FIELD_EMPTY;
@@ -33,7 +31,7 @@
           $respuesta_sql->execute();
 
         	$filas_contadas=$respuesta_sql->rowCount();
-          if ($filas_contadas == 1) {
+          if ($filas_contadas = 1) {
             return $result = true;
           } else {
               return $result = false;
