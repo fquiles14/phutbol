@@ -13,8 +13,11 @@
   		//iniciamos sesión antes de redirigir al usuario a su página
   		session_start();
   		$_SESSION["usuario"]=$_POST["login"];
+
   		header("location:../view/home.php");
-  	}else{
+  	} elseif ($autenticado == 'admin') {
+  	  header("location:../view/administrator.php");
+  	} else {
   		header("location:../view/v_registro.php");
   	}
   }

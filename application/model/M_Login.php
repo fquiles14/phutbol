@@ -11,7 +11,7 @@
     //fin constructor
 
     //inicio funcion login
-    public function login($Login, $password) {
+    public function login($login, $password) {
       //private $db;
       require_once '../libs/Conectar.php';
       $db = new Conectar();
@@ -26,20 +26,35 @@
 
         } else {
           require_once '../controller/C_Login.php';
-          $consulta_sql = "SELECT * FROM usuarios where login='$login' and password='$password'";
+          //$consulta_sql = "SELECT * FROM usuarios where login='$login' and password='$password'";
+          $consulta_sql = "SELECT * FROM usuarios where login='$login'";
           $respuesta_sql = $db->prepare($consulta_sql);
           $respuesta_sql->execute();
 
-        	$filas_contadas=$respuesta_sql->rowCount();
+        	/*$filas_contadas=$respuesta_sql->rowCount();
           if ($filas_contadas = 1) {
             return $result = true;
           } else {
               return $result = false;
             }
+          }*/
+
+          $resultado = $respuesta_sql->fetch();
+          
+          if ($_POST['password'] == $resultado['password']) {
+            if ($resultado['admin'] == 0) {
+              return $result = 'admin';
+            } elseif ($resultado['admin'] == 1){
+              return $result = true;
+            } else {
+              return $result = false;
+            }
           }
+        }
       } catch (PDOException $e) {
     	   echo $e->getMessage();
       }
+
     }
     //fin funcion login
 
