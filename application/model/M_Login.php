@@ -39,8 +39,9 @@
             }
           }*/
 
+
           $resultado = $respuesta_sql->fetch();
-          
+
           if ($_POST['password'] == $resultado['password']) {
             if ($resultado['admin'] == 0) {
               return $result = 'admin';
@@ -51,6 +52,7 @@
             }
           }
         }
+
       } catch (PDOException $e) {
     	   echo $e->getMessage();
       }
